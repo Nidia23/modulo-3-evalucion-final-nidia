@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import hpLogo from '/hp.png'
 import './App.css'
+import CardList from './pages/Card-list'
+
 
 function App() {
   
@@ -23,6 +25,7 @@ function App() {
         <button>Buscar</button>
         </div>
       </section>
+     <CardList></CardList>
     </>
   )
 }
