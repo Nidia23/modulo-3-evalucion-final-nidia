@@ -2,12 +2,13 @@ import { useState, useEffect } from "react"
 import Cards from "../components/Cards";
 
 const CardList = () =>{
+    const[string, setString] = useState('')
     const[card, setCard] = useState([])
 
     useEffect(() =>{
         const CardApi = async () =>{
             try{
-                const response = await fetch ('https://hp-api.onrender.com/api/characters')
+                const response = await fetch (`https://hp-api.onrender.com/api/characters`)
                 if(!response.ok){
                     throw new Error ('Personaje no encontrado')
                 }
@@ -18,11 +19,16 @@ const CardList = () =>{
         }
 
         CardApi();
-    }, []);
+    }, [string]);
 
 
     return(
         <div>
+            <input type="text"
+            placeholder="Harry Potter"
+            value={string}
+            onChange={(event)=> setString(event.target.value)}></input>
+            <div>
             {card.map((cards) =>(
 
                 <Cards
@@ -34,7 +40,9 @@ const CardList = () =>{
                 />
                 
             )
+            
         )}
+        </div>
         </div>
 
     );

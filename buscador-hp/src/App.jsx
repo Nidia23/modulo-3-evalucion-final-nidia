@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import hpLogo from '/hp.png'
-import './App.css'
+import './App.scss'
+import { Link, Route, Routes } from 'react-router-dom'
 import CardList from './pages/Card-list'
+import CharDetail from './pages/Card-detail'
 
 
 function App() {
@@ -11,7 +13,7 @@ function App() {
     <>
       <section>
         <div>
-          <form>
+          <form className='form-card-list'>
             <label for='name'>Encuentra tu personaje: </label>
             <input type='text' placeholder='Harry Potter'></input>
             <label for='name'>¿A qué casa pertenece?: </label>
@@ -24,6 +26,13 @@ function App() {
           </form>
         <button>Buscar</button>
         </div>
+      </section>
+    <></>
+      <section>
+        <Routes>
+          <Route path="/" element={<CardList/>}/>
+          <Route path="/characters/:id" element={<CharDetail/>}/>
+        </Routes>
       </section>
      <CardList></CardList>
     </>

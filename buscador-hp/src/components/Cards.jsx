@@ -1,8 +1,8 @@
-import './Cards.css'
+import './Cards.scss'
 
-const Cards = ({image,name, gender, house, species }) =>{
+const Cards = ({image,name, gender, house, species, onSelectCharacter }) =>{
     return(
-          <div className="card-container-detail">
+          <div className="card-container-detail" onClick={() => onSelectCharacter?.(id)}>
             <div className="cardDetail-info">
                 <img className="cardDetail-imgcard"src={image}></img>
                 <h2 className="cardDetail-name">{name}</h2>

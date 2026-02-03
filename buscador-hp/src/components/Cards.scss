@@ -1,0 +1,37 @@
+//Colors
+$card-bg:#0a1a3f;
+$card-detail:#fadb10;
+$card-borde: #c5a059;
+
+.card-container-detail{
+  /* Dimensiones y Forma */
+    background: $card-bg;
+    border: 2px solid $card-detail;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px #4b286d14;
+    padding: 1.5rem 1rem;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .15s, border-color .15s;
+
+      &:hover{
+        transform: translateY(-4px) scale(1.03);
+        
+      }
+}
+.cardDetail-imgcard{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid $card-borde;
+    background: #fff;
+}
+  
+
+.cardDetail-name, .cardDetail-gender, .cardDetail-house, .cardDetail-species { 
+    color: $card-detail;
+}
+
