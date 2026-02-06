@@ -1,10 +1,8 @@
-import { useState } from 'react'
-import hpLogo from '/hp.png'
-import './App.scss'
 import { Link, Route, Routes } from 'react-router-dom'
+import HpLogo from '/public/hp.png'
 import CardList from './pages/Card-list'
-import CharDetail from './pages/Card-detail'
-
+import CardsDetail from './pages/CardsDetail'
+import './components/App.scss'
 
 function App() {
   
@@ -31,7 +29,7 @@ function App() {
       <section>
         <Routes>
           <Route path="/" element={<CardList/>}/>
-          <Route path="/characters/:id" element={<CharDetail/>}/>
+          <Route path="/characters/:id" element={<CardsDetail/>}/>
         </Routes>
       </section>
      <CardList></CardList>

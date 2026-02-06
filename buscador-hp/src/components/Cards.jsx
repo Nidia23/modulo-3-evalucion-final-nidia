@@ -1,10 +1,10 @@
 import './Cards.scss'
 
-const Cards = ({image,name, gender, house, species, onSelectCharacter }) =>{
+const Cards = ({image,name, gender, house, species }) =>{
     return(
-          <div className="card-container-detail" onClick={() => onSelectCharacter?.(id)}>
+          <div className="card-container-detail">
             <div className="cardDetail-info">
-                <img className="cardDetail-imgcard"src={image}></img>
+                <img className="cardDetail-imgcard"src={image || '/noImage.jfif'} alt= {name}></img>
                 <h2 className="cardDetail-name">{name}</h2>
                 <h3 className="cardDetail-gender">Genero: {gender}</h3>
                 <h3 className="cardDetail-house">Casa: {house}</h3>
@@ -15,3 +15,4 @@ const Cards = ({image,name, gender, house, species, onSelectCharacter }) =>{
 }
 
 export default Cards
+

@@ -1,0 +1,76 @@
+//Card
+/*import './Cards.scss'
+
+const Cards = ({image,name, gender, house, species, onSelectCharacter }) =>{
+    return(
+          <div className="card-container-detail" onClick={() => onSelectCharacter?.(id)}>
+            <div className="cardDetail-info">
+                <img className="cardDetail-imgcard"src={image}></img>
+                <h2 className="cardDetail-name">{name}</h2>
+                <h3 className="cardDetail-gender">Genero: {gender}</h3>
+                <h3 className="cardDetail-house">Casa: {house}</h3>
+                <h3 className="cardDetail-species">Especie: {species}</h3>
+            </div>
+        </div>
+    )
+}
+
+export default Cards
+
+Card-list
+import { useState, useEffect } from "react"
+import Cards from "../components/Cards";
+
+const CardList = () =>{
+    const[string, setString] = useState('')
+    const[card, setCard] = useState([])
+
+    useEffect(() =>{
+        const CardApi = async () =>{
+            try{
+                const response = await fetch (`https://hp-api.onrender.com/api/characters`)
+                if(!response.ok){
+                    throw new Error ('Personaje no encontrado')
+                }
+                const data = await response.json()
+                    setCard(data)
+            }catch(error){
+                console.log(error)}
+        }
+
+        CardApi();
+    }, [string]);
+
+    const onSelect = (id) => {
+    const selectedCharacter = character.find((e) => e.id === id);
+    if (selectedCamiseta) alert("Seleccionada la camiseta");
+  };
+
+
+    return(
+        <div>
+            <input type="text"
+            placeholder="Harry Potter"
+            value={string}
+            onChange={(event)=> setString(event.target.value)}></input>
+            <div>
+            {card.map((cards) =>(
+
+                <Cards
+                    image={cards.image}
+                    name={cards.name}
+                    gender={cards.gender}
+                    house={cards.house}
+                    species={cards.species}
+                />
+                
+            )
+            
+        )}
+        </div>
+        </div>
+
+    );
+};
+
+export default CardList;

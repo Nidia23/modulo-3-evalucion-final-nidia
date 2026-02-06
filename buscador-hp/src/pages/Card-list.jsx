@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react"
-import Cards from "../components/Cards";
+import Cards from "../components/Cards"
 
 const CardList = () =>{
-    const[string, setString] = useState('')
     const[card, setCard] = useState([])
 
     useEffect(() =>{
@@ -19,16 +18,11 @@ const CardList = () =>{
         }
 
         CardApi();
-    }, [string]);
+    }, []);
 
 
     return(
         <div>
-            <input type="text"
-            placeholder="Harry Potter"
-            value={string}
-            onChange={(event)=> setString(event.target.value)}></input>
-            <div>
             {card.map((cards) =>(
 
                 <Cards
@@ -42,7 +36,6 @@ const CardList = () =>{
             )
             
         )}
-        </div>
         </div>
 
     );
