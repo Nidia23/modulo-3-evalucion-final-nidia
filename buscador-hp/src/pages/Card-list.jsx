@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Cards from "../components/Cards"
-
+import { Link } from 'react-router-dom'
+//Lista de cartas que ve el usuario
 const CardList = () =>{
     const[card, setCard] = useState([])
 
@@ -21,24 +22,43 @@ const CardList = () =>{
     }, []);
 
 
-    return(
-        <div>
-            {card.map((cards) =>(
 
+    return(
+        <div className="card-list">
+            <div className="card-list-title">
+                <h1><i style={{color:'#fadb10'}}><b>"Juro solemnemente que esto es una travesura"</b></i></h1>
+            </div>
+            <div className="card-list-form">
+                <form className='form-card-list'>
+                    <img src="/huella.png"></img><label style={{color:'#fadb10'}} for='name'>Encuentra tu personaje: </label>
+                    <input type='text' placeholder='Harry Potter'></input><img src="/huella.png"></img><br>
+                    </br><br></br>
+                    <label style={{color:'#fadb10'}} for='name'>¿A qué casa pertenece?: </label>
+                    <select name='filter-house' id='houses'>
+                        <option value='Gryffindor'>Gryffindor</option>
+                        <option value='Slytherin'>Slytherin</option>
+                        <option value='Hufflepuff'>Hufflepuff</option>
+                        <option value='Ravenclaw'>Ravenclaw</option>
+                    </select>
+                </form>
+            </div><br></br>
+            <div className="card-list-container">
+            {card.map((character) =>(
+                <Link key={character.name} to={`/characters/${(character.name)}`}>
                 <Cards
-                    image={cards.image}
-                    name={cards.name}
-                    gender={cards.gender}
-                    house={cards.house}
-                    species={cards.species}
+                    image={character.image}
+                    name={character.name}
+                    gender={character.gender}
                 />
-                
-            )
-            
-        )}
+                </Link>
+                    
+                )
+            )};
+            </div>
         </div>
 
     );
 };
 
 export default CardList;
+

@@ -3,7 +3,8 @@ $card-bg:#0a1a3f;
 $card-detail:#fadb10;
 $card-borde: #c5a059;
 
-.card-container-detail{
+//Todas las cartas
+.card-container, .card-container-detail{
   /* Dimensiones y Forma */
     background: $card-bg;
     border: 2px solid $card-detail;
@@ -21,7 +22,7 @@ $card-borde: #c5a059;
         
       }
 }
-.cardDetail-imgcard{
+.card-imgcard, .cardDetail-imgcard{
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -31,7 +32,29 @@ $card-borde: #c5a059;
 }
   
 
-.cardDetail-name, .cardDetail-gender, .cardDetail-house, .cardDetail-species { 
+.card-info, .cardDetail-info { 
     color: $card-detail;
 }
 
+//Card-List
+.card-list-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:1rem;
+  justify-content: center;
+}
+
+.card-list-title{
+  font-size: 1.3rem;
+} 
+
+.card-list-form{
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 2rem;
+}
+
+.backBtn{
+  margin-bottom:2rem;
+}

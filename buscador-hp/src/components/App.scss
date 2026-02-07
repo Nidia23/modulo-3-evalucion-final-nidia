@@ -1,13 +1,12 @@
 
-body{
-background-image: url('/map-merodeador.jpg')
-}
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+body{
+  background-color: hsl(353.77deg 82.8% 18.24%);
 }
 
 .logo {
@@ -23,21 +22,7 @@ background-image: url('/map-merodeador.jpg')
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+//Cards
 .card {
   padding: 2em;
 }
@@ -45,5 +30,3 @@ background-image: url('/map-merodeador.jpg')
 .read-the-docs {
   color: #888;
 }
-
-

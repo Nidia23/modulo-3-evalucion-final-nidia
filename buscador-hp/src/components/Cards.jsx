@@ -1,14 +1,13 @@
 import './Cards.scss'
-
-const Cards = ({image,name, gender, house, species }) =>{
+//Cartas que recibo 
+const Cards = ({image,name, gender}) =>{
     return(
-          <div className="card-container-detail">
-            <div className="cardDetail-info">
-                <img className="cardDetail-imgcard"src={image || '/noImage.jfif'} alt= {name}></img>
-                <h2 className="cardDetail-name">{name}</h2>
-                <h3 className="cardDetail-gender">Genero: {gender}</h3>
-                <h3 className="cardDetail-house">Casa: {house}</h3>
-                <h3 className="cardDetail-species">Especie: {species}</h3>
+          <div className="card-container">
+            <div className="card-info">
+                <img className="card-imgcard"src={image || '/noImage.jfif'} alt= {name}></img>
+                <h2 className="card-name">{name}</h2>
+                <h3 className="card-gender">Genero: {gender || 'No tiene género'}</h3>
+                
             </div>
         </div>
     )
