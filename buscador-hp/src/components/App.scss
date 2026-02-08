@@ -22,4 +22,8 @@ body{
   display: block;
   width: 100%;
   height: auto;
+
+  &:hover{
+      cursor: url('/varita2.png') 2 2, pointer;
+    }
 }
