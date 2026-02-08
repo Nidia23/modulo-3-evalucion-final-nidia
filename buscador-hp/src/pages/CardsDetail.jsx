@@ -21,7 +21,7 @@ const CardsDetail = () => {
     <div>
       <Link to="/characters">
         <button className="backBtn">Volver al inicio
-          <img src="/huella.png"></img>
+          <img src="/huellas.png"></img>
           </button>
       </Link>
       <div className="card-container-detail">

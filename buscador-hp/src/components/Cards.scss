@@ -19,6 +19,7 @@ $card-borde: #c5a059;
 
       &:hover{
         transform: translateY(-4px) scale(1.03);
+        cursor: url('/varita2.png') 2 2, pointer;
       }
 }
 .card-imgcard, .cardDetail-imgcard{
@@ -63,6 +64,6 @@ $card-borde: #c5a059;
   border: 3px solid $card-detail;
 
     &:hover{
-      cursor: url('/varita2.png'), 2 2, pointer;
+      cursor: url('/varita2.png') 2 2, pointer;
     }
 }

@@ -49,9 +49,9 @@ const filteredCards = card.filter((character) => {
             </div>
             <div className="card-list-form">
                 <form className='form-card-list'>
-                    <img src="/huella.png"></img>
+                    <img src="/huellas.png"></img>
                     <label style={{color:'#fadb10'}} for='name'>Encuentra tu personaje: </label>
-                    <input type='text' placeholder='Harry Potter' value={searchName} onChange={(ev)=>setSearchName(ev.target.value)}></input><img src="/huella.png"></img><br>
+                    <input type='text' placeholder='Harry Potter' value={searchName} onChange={(ev)=>setSearchName(ev.target.value)}></input><img src="/huellas.png"></img><br>
                     </br><br></br>
                     <label style={{color:'#fadb10'}} for='name'>
                         <img src="/icono-sombrero1.png"></img>¿A qué casa pertenece?: 
